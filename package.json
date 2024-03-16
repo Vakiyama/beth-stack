@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "create-database": "echo 'PRAGMA schema_version;' | sqlite3 database.db && echo 'database created'"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/static": "^0.8.1",
+    "@libsql/client": "^0.5.3",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
