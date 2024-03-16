@@ -27,6 +27,9 @@ bun run dev
 
 Your server should be up at `localhost:3000` 🚀
 
+Elysia will autorefresh your browser whenever bun detects a change while
+running in dev mode, although it has only been tested on my machine.
+
 ## **Bun, Elysia, Turso, HTMX + Tailwind**
 
 For building small to mid scale applications with a pleasant DX.
