@@ -5,7 +5,9 @@ export const Head = ({ title }: { title: string }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>{title}</title>
-      {process.env.IS_DEV && <script type="text/javascript" src="/public/js/devReload.js" />}
+      {process.env.IS_DEV && (
+        <script type="text/javascript" src="/public/js/devReload.js" />
+      )}
       {/* // roboto if you'd like to include it
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
