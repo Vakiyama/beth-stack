@@ -1,5 +1,4 @@
-import { Head } from './head';
-import { Navbar } from './navbar';
+import { Head } from './Head';
 
 export const HtmlLayout = ({
   title,
