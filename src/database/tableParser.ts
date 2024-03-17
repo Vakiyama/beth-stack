@@ -1,6 +1,8 @@
 import { ResultSet } from '@libsql/client/.';
 
-export function parseTable<T>(result: ResultSet) {
+export type OmitMultiple<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+export function parseTable<T>(result: ResultSet): T[] {
   return result.rows.map((row) => {
     return Object.keys(row).reduce((object, key, index) => {
       if (index >= result.columns.length) return object;

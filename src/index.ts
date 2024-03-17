@@ -23,7 +23,7 @@ export const app = new Elysia()
 const callback: ListenCallback = async ({ hostname, port }) => {
   if (!globalThis.isOpened) {
     globalThis.isOpened = true;
-    open(`http://${hostname}:${port}`); // https://www.npmjs.com/package/open
+    open(`http://${hostname}:${port}`);
   }
 
   if (globalThis.ws) globalThis.ws.send('live-reload');
