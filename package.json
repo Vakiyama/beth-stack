@@ -3,19 +3,21 @@
   "version": "1.0.50",
   "scripts": {
     "start": "bun src/index.ts",
-    "dev": " bun run tailwind-watch && bun --hot src/index.ts",
+    "dev": "bun run tailwind-watch & bun --hot src/index.ts",
     "create-database": "echo 'PRAGMA schema_version;' | sqlite3 database.db && echo 'database created'",
-    "tailwind-watch": "bunx tailwindcss -i ./src/tailwind.css -o ./public/output.css --watch"
+    "tailwind-watch": "bun x tailwindcss -i ./src/tailwind.css -o ./public/output.css --watch"
   },
   "dependencies": {
     "@elysiajs/html": "^0.8.0",
     "@elysiajs/static": "^0.8.1",
-    "@libsql/client": "^0.5.3",
+    "@libsql/client": "^0.6.0",
+    "drizzle-orm": "^0.30.6",
     "elysia": "latest",
     "open": "^10.1.0"
   },
   "devDependencies": {
     "bun-types": "latest",
+    "drizzle-kit": "^0.20.14",
     "tailwindcss": "^3.4.1"
   },
   "module": "src/index.js"

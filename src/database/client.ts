@@ -1,3 +1,4 @@
+import { drizzle } from 'drizzle-orm/libsql';
 import { createClient } from '@libsql/client';
 
 const isDev = process.env.IS_DEV;
@@ -17,4 +18,6 @@ const liveConfig = {
   authToken,
 };
 
-export const client = createClient(isDev ? devConfig : liveConfig);
+const client = createClient(isDev ? devConfig : liveConfig);
+
+export const db = drizzle(client);
