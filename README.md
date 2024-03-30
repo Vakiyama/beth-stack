@@ -35,3 +35,7 @@ Your server should be up at `localhost:3000` 🚀
 
 Elysia will auto-refresh your browser whenever bun detects a change while
 running in dev mode.
+
+## Stack
+
+Bun, Elysia, Turso (+ Drizzle), HTMX && TailwindCSS
